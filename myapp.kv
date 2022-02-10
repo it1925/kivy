@@ -1,0 +1,14 @@
+<Title@Label>
+    text: 'Title'
+    size_hint: 1, 1
+    pos_hint: {'left': 1, 'top': 1}
+    color: 0, 1, 1
+    font_size: 30
+    haling: 'center'
+    valing: 'middle'
+    canvas.before:
+        Color:
+            rgb: 0, .5, .5
+        Rectangle:
+            size: self.size
+            pos: self.pos
