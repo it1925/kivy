@@ -1,3 +1,8 @@
+<Logo@ButtonBehavior+Image>
+    size_hint: .05, 1
+    pos_hint: {'left':1, 'top':1}
+    source: './source/Kivy_logo.png'
+
 <Title@Label>
     text: 'Title'
     size_hint: 1, 1
@@ -6,9 +11,40 @@
     font_size: 30
     haling: 'center'
     valing: 'middle'
-    canvas.before:
+    canvas.before   :
         Color:
             rgb: 0, .5, .5
         Rectangle:
             size: self.size
             pos: self.pos
+
+<ScreenTitle@RelativeLayout>
+    size_hint: 1, .2
+    pos_hint: {'left':1, 'top':1}
+    canvas.before:
+        Color:
+            rgb: 0, 0, 1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+<MenuButton@Button>
+    size_hint: 1, .1
+
+<StatusBar@GridLayout>
+    cols: 3
+    canvas:
+        Color:
+            rgb: .1, .1, .1
+        Rectangle:
+            size: self.size
+    Label:
+        Image:
+            source: './source/skola-logo.png'
+    Label:
+        markup: True
+        text: "Copyright 2022 - [b]IT3[b]"
+    Label:
+        text: "K(iv)YS"
+        font_size: 30
+        bold: True
